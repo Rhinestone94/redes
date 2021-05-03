@@ -1,3 +1,17 @@
+/*PERGUNTAS:
+ * 1. Qual a variável onde está a guardar a rede?
+ * 
+ * 2. Como está a fazer a ligação entre a listas, ou seja, como está a ligar os nós origem aos nós destino e aos custos?
+ * 
+ * ------------------
+ * 
+ * Se for possível, para além do output "Desde o no 1 até ao no 3 etc.." meter também o output:
+ * Caminho mais curto entre nó 1 e nó 3:
+ * 1 - 2 - 3
+ */
+
+
+
 package heap;
 
 import java.io.File;
