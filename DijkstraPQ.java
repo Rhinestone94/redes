@@ -6,8 +6,10 @@
  * ------------------
  * 
  * Se for possível, para além do output "Desde o no 1 até ao no 3 etc.." meter também o output:
- * Caminho mais curto entre nó 1 e nó 3:
- * 1 - 2 - 3
+ * "Caminho mais curto entre nó 1 e nó 3:
+ * 1 - 2 - 3 "
+ * ... e para os restantes.
+ * - Obigado
  */
 
 
