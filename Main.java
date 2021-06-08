@@ -32,7 +32,7 @@ public class Main {
 		ArrayList tabela_total = new ArrayList<>();  //vai adicionando ; a tabela vai sendo preenchida
 		//ArrayList <Arco> tabela_total = new ArrayList<>(); 
 
-		// caso haja repetidos coluna do nó1 e nó2 
+
 		while ((linha = buffer.readLine()) != null) { // para saber o tamanho / nº de nós a utilizar no grafo / para construir o grafo
 			elemento = linha.split(" ");  
 			if (!tabela_total.contains(Integer.parseInt(elemento[0]))) // se a tabela total nao contem um certo numero da coluna dos nos origem, entao adiciona-o, se nao o tiver adiciona-o
@@ -45,7 +45,7 @@ public class Main {
 
 		// Cria o grafo
 
-		//Grafo grafo = new Grafo(20); //EXEMPLO para grafo Desconexo
+		//Rede grafo = new Rede(7); //EXEMPLO para grafo Desconexo
 		Rede grafo = new Rede(tabela_total.size());
 
 
@@ -58,7 +58,7 @@ public class Main {
 			int no2 = Integer.parseInt(elemento[1]);
 			int custo = Integer.parseInt(elemento[2]);
 
-			grafo.add_Arco(no1, no2, custo);
+			grafo.adicionaArco(no1, no2, custo);
 
 		}
 
@@ -75,9 +75,7 @@ public class Main {
 		Rede.Existe_arco(grafo, 1, 4); // alterar consoante o pretendido
 
 
-		int noFonte = 2;
-
-		//grafo.Dijkstraa(1, grafo.adjList);
+		int noFonte = 1;
 
 		grafo.Dijkstraa(noFonte);
 

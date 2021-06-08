@@ -27,41 +27,25 @@ public class HeapB {
 	// find_min 
 	public No_pred find_min() {
 		No_pred min = heap.get(0); // vai buscar o 1º elemento que esta no topo da heap, que é o de minima chave
-		return min; // retorna 
+		return min;  
 	}
-	
+
 	// delete_min
 	public No_pred delete_min() {
-		
-		
+
+
 		No_pred ultimo ; 
-		//ultimo = heap.get(0); // primeira posicao da heap, à conta da chave / este é o 1º elemento
-		
+		//ultimo = heap.get(0); 
+
 		ultimo = heap.get(heap.size()-1); // vai buscar o ultimo elemento na heap, à conta da chave
 		heap.set(0, ultimo); // coloca um elemento igual ao ultimo na primeira posicao da heap 
-		
+
 		heap.remove(heap.size()-1); // remove o ultimo elemento e atualiza tamanho da heap
-		siftdown(0); // heap fica organizada
+		siftdown(0); // organiza heap
 
 		return ultimo;
 
 	}
-	
-	
-	
-	 /*public No_pred del_min() {
-		 
-
-	            No_pred ultimo = heap.get(heap.size()-1); // guarda o que esta na primeira posicao
-	            
-	            heap.set(0, ultimo); // coloca o ultimo elemento na 1º posicao da heap
-	            heap.remove(0); // remove elemento da 1º posicao
-	            //siftdown(0); 
-	            
-	            return ultimo;
-	             
-	        }*/
-
 
 
 
@@ -92,18 +76,19 @@ public class HeapB {
 		if (rightChild < heap.size() && heap.get(minchild).chave > heap.get(rightChild).chave){
 			minchild = rightChild;
 		}
-	
-			
+
+
 		if (minchild != k){ 
 			swap(k, minchild);
-			siftdown(minchild); 
+			//siftdown(minchild); 
 		}
 	}
+
 	/*public void sdown(int k) {
 		int minchild = 0;
 		int leftChild = 2 * k +1; // esquerda +1
 		int rightChild = 2 * k +2; // direita +2
-		
+
 		while (minchild == k) {
 			if(leftChild < heap.size() && heap.get(minchild).chave > heap.get(leftChild).chave){    
 				minchild = leftChild;
@@ -115,12 +100,12 @@ public class HeapB {
 				swap(k, minchild);
 				minchild = k;
 			}
-			
+
 		} 
-		
+
 	}*/
-	
-	
+
+
 	// Troca
 	public void swap(int a, int b) {
 		No_pred temp = heap.get(a);
@@ -161,7 +146,5 @@ public class HeapB {
 	}
 
 }
-	    
-	  
 
 		
